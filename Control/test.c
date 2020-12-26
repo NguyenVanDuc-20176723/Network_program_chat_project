@@ -1,4 +1,4 @@
-#include "jsonapi.h"
+#include "../symtab/jsonapi.h"
 
 int main(int argc, char **argv) {
 	

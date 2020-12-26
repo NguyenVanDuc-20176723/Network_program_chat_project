@@ -10,7 +10,7 @@
 #include "../symtab/object_data.h"
 #include "../symtab/error_invalid.h"
 // #include "../symtab/database.h"
-#include "jsonapi.h"
+#include "../symtab/jsonapi.h"
 #define QUEUE_MAX 10
 //test
 typedef struct {
