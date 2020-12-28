@@ -35,7 +35,11 @@ all: $(OBJS) $(OBJ_DATA) $(OBJ_ERROR_INVALID) server
 	$(LD)  $(OBJS) $(OBJ_DATA) $(OBJ_ERROR_INVALID)  $(LDFLAGS) -o $(TARGET)
 
 server: $(OBJ_SERVER) $(OBJ_DATA) $(OBJ_ERROR_INVALID) $(OBJ_JSONAPI)
+<<<<<<< HEAD
 	$(CC) $(OBJ_SERVER) $(OBJ_DATA) $(OBJ_ERROR_INVALID) $(OBJ_JSONAPI) -o server -ljson-c
+=======
+	$(CC) $(OBJ_SERVER) $(OBJ_DATA) $(OBJ_ERROR_INVALID) $(OBJ_JSONAPI) -o server -ljson-c -lcurl
+>>>>>>> 2e54436a8b7b3146af368fc7ac9ca1d57d04e588
 
 $(OBJ_SERVER): $(OBJ_SERVER_PATH)
 	$(CC) -c $(CCFLAGS) $(OBJ_SERVER_PATH)
