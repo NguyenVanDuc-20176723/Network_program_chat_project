@@ -3,6 +3,14 @@
 #include <string.h>
 #include <stdlib.h>
 
+<<<<<<< HEAD
+=======
+struct url_data {
+    size_t size;
+    char* data;
+};
+
+>>>>>>> 2e54436a8b7b3146af368fc7ac9ca1d57d04e588
 typedef struct user {
     struct json_object *id;
     struct json_object *name;
@@ -112,8 +120,13 @@ void convert_object_to_struct_room();
 
 void convert_object_to_struct_message();
 
+<<<<<<< HEAD
 const char *convert_object_to_json_user(User elememt);
 
+=======
+
+const char *jsondumpsPassword(char*password);
+>>>>>>> 2e54436a8b7b3146af368fc7ac9ca1d57d04e588
 const char *convert_object_to_json_friend(Friend elememt);
 
 const char *convert_object_to_json_room(Room elememt);
@@ -138,3 +151,13 @@ Data_base getDatabase(user_db user, friend_db *friend, int len_friend, Chat_Priv
 int check_user(char* username);
 
 user_db getUser(char* username);
+<<<<<<< HEAD
+=======
+
+size_t write_data(void *ptr, size_t size, size_t nmemb, struct url_data *data);
+char *handle_url(char* url);
+
+void postUser(user_db user);
+void changePassword(char* username, char* password);
+void loginStatus(char* username,int status);
+>>>>>>> 2e54436a8b7b3146af368fc7ac9ca1d57d04e588
