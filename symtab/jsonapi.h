@@ -3,6 +3,11 @@
 #include <string.h>
 #include <stdlib.h>
 
+struct url_data {
+    size_t size;
+    char* data;
+};
+
 typedef struct user {
     struct json_object *id;
     struct json_object *name;
@@ -58,7 +63,7 @@ typedef struct {
 }member_db;
 
 typedef struct {
-	int ID;
+	// int ID;
 	int id_username;
 	char from_username[30];
 	char from_name[30];
@@ -67,7 +72,7 @@ typedef struct {
 }message_db;
 
 typedef struct {
-	int ID;
+	// int ID; // id nguoi gui
 	char to_username[30];
 	char to_name[30];
 	message_db msg_private[250];
@@ -96,45 +101,53 @@ typedef struct {
 typedef struct {
 	Signal_db signal;
 	user_db user;
-	friend_db list_friend[50];
+	friend_db list_friend[20];
 	int length_list_friend;
-	Chat_Private_ chat_private[50];
+	Chat_Private_ chat_private[1000];
 	int length_chat_private;
-	group_db group[20];
+	group_db group[10];
 	int length_group;
 }Data_base;
 
 void convert_object_to_struct_user();
 
-void convert_object_to_struct_friend();
+Data_base *getListFriend(char* element);
 
-void convert_object_to_struct_room();
+Data_base * getListRoom();
 
-void convert_object_to_struct_message();
+Data_base *getMessagePrivate(char* element);
 
-const char *convert_object_to_json_user(User elememt);
 
+const char *jsondumpsPassword(char*password);
 const char *convert_object_to_json_friend(Friend elememt);
 
 const char *convert_object_to_json_room(Room elememt);
 
 const char *convert_object_to_json_message(Message elememt);
 
-friend_db getFriend(Friend friend, User profile);
+friend_db getFriend(Friend friend);
 
 member_db getMember(User profile);
 
-message_db getMessage(Message message, User profile);
+message_db getMessage(Message message, user_db profile);
 
-Chat_Private_ getChatPrivate(message_db message, User profile, int index);
+Chat_Private_ getChatPrivate(message_db message, int index, user_db profile);
 
-group_db getGroupDB(message_db message, member_db member, Room room, int index_member, int index_message);
+group_db getGroupDB(Room room);
 
 user_db getUserDB(User user);
 
-Data_base getDatabase(user_db user, friend_db *friend, int len_friend, Chat_Private_ *chat_private, 
-						int len_chat_private, group_db *group, int len_group);
+// Data_base getDatabase(user_db user, friend_db *friend, int len_friend, Chat_Private_ *chat_private, 
+// 						int len_chat_private, group_db *group, int len_group);
 
 int check_user(char* username);
 
-user_db getUser(char* username);
+user_db getUser(char* username,int id);
+
+
+size_t write_data(void *ptr, size_t size, size_t nmemb, struct url_data *data);
+char *handle_url(char* url);
+
+void postUser(user_db user);
+void changePassword(char* username, char* password);
+void loginStatus(char* username,int status);
