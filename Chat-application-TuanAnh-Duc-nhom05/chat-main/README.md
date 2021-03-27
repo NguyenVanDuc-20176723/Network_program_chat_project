@@ -37,4 +37,4 @@ Nguyễn Văn Đức - 20176692
 
 Lưu ý: các bước trên để chạy trên 1 máy (localhost)
 - để có thể kết nối các máy: các máy phải chung một mạng LAN, sử dịa chỉ IP bằng địa chỉ máy(chạy server, batabase_server). Sửa tại dòng 80 của file server.c (trong thư mục Control) , dòng 4 của file jsonapi.c (trong thư mục symtab), và ALLWED_HOSTS tại dòng 27 của Server_database/ChatApp/App/settings.py
----------------------------end---------------------------
+<br>---------------------------end---------------------------
