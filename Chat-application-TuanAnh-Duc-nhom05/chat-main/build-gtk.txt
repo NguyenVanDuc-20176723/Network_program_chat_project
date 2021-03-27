@@ -1,0 +1,17 @@
+	gcc -o <app name> <file name C> -Wall `pkg-config --cflags --libs gtk+-3.0` -export-dynamic
+
+
+	gcc client.c `pkg-config --cflags --libs glib-2.0` -o client
+	gcc server.c `pkg-config --cflags --libs glib-2.0` -o server
+
+	//glade
+	sudo apt-get install glade
+
+	//gtk
+	sudo apt-get install libgtk-3-dev
+
+	//json-c
+	sudo apt-get install libjson-c-dev
+	
+	//curl
+	sudo apt-get install libcurl4-openssl-dev
