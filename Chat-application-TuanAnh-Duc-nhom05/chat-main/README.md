@@ -3,7 +3,9 @@
 
 # thành viên:
 Nguyễn Văn Đức - 20176723<br>
-Nguyễn Văn Đức - 20176692
+Nguyễn Tuấn Anh - 20176692<br>
+Trường đại học bách khoa hà nội <br>
+CNTT&TT Việt Nhật K62
 
 # Tính năng của App:
 - Các tính năng người dùng (Đăng ký, Đăng nhập…)
