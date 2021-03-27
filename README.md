@@ -30,7 +30,7 @@ CNTT&TT Việt Nhật K62
 - cd vào thư mục (Chat-application-TuanAnh-Duc-nhom05/chat-main) của dự án 
 - cài các gói, thư viện cần thiết ở file build-gtk.txt (https://github.com/NguyenVanDuc-20176723/project_chat/blob/main/Chat-application-TuanAnh-Duc-nhom05/chat-main/build-gtk.txt)
 - cấu hình server_database (thư mục Server_database của dự án): sử dụng PyCharm để cấu hình<br>
-	<img src="images/Cau-hinh-DB-Server.png" alt="cau hinh Database server">
+	<img src="Chat-application-TuanAnh-Duc-nhom05/images/Cau-hinh-DB-Server.png" alt="cau hinh Database server">
 - sử dụng command (để tạo file chạy): make
 - server: ./server port_number<br>
 	vd: ./server 1212
